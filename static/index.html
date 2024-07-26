@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NowReact Emoji Grid</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            font-size: 20px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <script>
+                const emojis = ['😀', '😂', '😍', '🤔', '😎', '🙄', '😴', '🤯', '🥳', '😇', '🤠', '🤖', '👽', '👻', '🎃', '🌈'];
+                for (let i = 0; i < 16; i++) {
+                    document.write('<tr>');
+                    for (let j = 0; j < 16; j++) {
+                        const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+                        document.write(`<td>${randomEmoji}</td>`);
+                    }
+                    document.write('</tr>');
+                }
+            </script>
+        </tbody>
+    </table>
+</body>
+</html>
